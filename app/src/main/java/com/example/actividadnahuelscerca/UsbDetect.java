@@ -9,7 +9,8 @@ import android.widget.Toast;
 import static androidx.core.content.ContextCompat.startActivity;
 
 public class UsbDetect extends BroadcastReceiver {
-    private MainActivity ma;
+    private MainActivity ma = new MainActivity();
+
     @Override
     public void onReceive(Context context, Intent intent) {
 
@@ -17,7 +18,6 @@ public class UsbDetect extends BroadcastReceiver {
 
             if (b){
                 Toast.makeText(context, "Entre", Toast.LENGTH_LONG).show();
-                ma = new MainActivity();
                 ma.llamarNueveOnce();
             }
 

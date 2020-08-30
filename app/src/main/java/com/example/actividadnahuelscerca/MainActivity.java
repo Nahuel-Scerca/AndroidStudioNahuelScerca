@@ -36,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void llamarNueveOnce(){
-
-        //startActivity(new Intent("Intent.ACTION_CALL", Uri.parse("tel: 911")));
+        Intent intent = new Intent("Intent.ACTION_CALL");
+        intent.setData(Uri.parse("tel: "+"911"));
+        startActivity(intent);
     }
 }
