@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void llamarNueveOnce(){
-        Toast.makeText(this, "Entre al 911", Toast.LENGTH_LONG).show();
+
         //startActivity(new Intent("Intent.ACTION_CALL", Uri.parse("tel: 911")));
     }
 }
