@@ -11,13 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".LlamadaActivity"></activity>
+
         <receiver
             android:name=".UsbDetect"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-            <action android:name="android.hardware.usb.action.USB_STATE" />
-        </intent-filter>
+                <action android:name="android.hardware.usb.action.USB_STATE" />
+            </intent-filter>
         </receiver>
 
         <activity android:name=".MainActivity">
