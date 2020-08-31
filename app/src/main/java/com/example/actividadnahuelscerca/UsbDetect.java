@@ -9,7 +9,6 @@ import android.widget.Toast;
 import static androidx.core.content.ContextCompat.startActivity;
 
 public class UsbDetect extends BroadcastReceiver {
-    private MainActivity ma = new MainActivity();
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -17,12 +16,20 @@ public class UsbDetect extends BroadcastReceiver {
         boolean b = intent.getExtras().getBoolean("connected");
 
             if (b){
+
                 Toast.makeText(context, "Entre", Toast.LENGTH_LONG).show();
-                ma.llamarNueveOnce();
+
+                Intent i = new Intent("Intent.ACTION_CALL");
+                intent.setData(Uri.parse("tel: "+"911"));
+                context.startActivity(i);
+
+            }
+            else{
+                Toast.makeText(context, "Desconectado", Toast.LENGTH_LONG).show();
             }
 
-        throw new UnsupportedOperationException("Not yet implemented");
-
     }
+
+
 
 }
